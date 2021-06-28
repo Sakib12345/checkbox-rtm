@@ -9,7 +9,7 @@ const Table = () => {
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(res => res.json())
-            .then(data => setRowDto(data))
+            .then(data => setRowDto(data.splice(0 , 5)))
     }, []);
 
     // All item select
